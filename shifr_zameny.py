@@ -63,3 +63,6 @@ while temp < 10:
     else:
         print("Wrong, try again 'encrypt' or  'decrypt'")
 
+
+# decrypting teachers cryptographic text
+
