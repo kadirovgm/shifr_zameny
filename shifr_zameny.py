@@ -92,11 +92,18 @@ fr_dict = {' ': 0.175, 'о': 0.089, 'е': 0.072, 'а': 0.062, 'и': 0.062, 'т':
            'й': 0.010, 'х': 0.009, 'ж': 0.007, 'ю': 0.006, 'ш': 0.006, 'ц': 0.004, 'щ': 0.003, 'э': 0.003,
            'ф': 0.002}
 
+fr_dict_podgon = {' ': 0.175, 'о': 0.089, 'е': 0.072, 'н': 0.053, 'т': 0.053, 'а': 0.062, 'и': 0.062, 'с': 0.045,
+                  'к': 0.028, 'в': 0.038, 'р': 0.040, 'м': 0.026, 'у': 0.021, 'л': 0.035, 'п': 0.023, 'д': 0.025,
+                  'ч': 0.012, 'ь': 0.014, 'х': 0.009, 'ж': 0.007, 'г': 0.013, 'ы': 0.016, 'я': 0.018, 'з': 0.016,
+                  'б': 0.014, 'ш': 0.006, 'й': 0.010, 'ю': 0.006, 'э': 0.003, 'щ': 0.003, 'ц': 0.004, 'ф': 0.002,
+                  'ъ': 0.014}
 ########################################################
 # print("Count of all characters in example.txt is:\n" + str(result))
-print("The result of freq analys: " + str(sorted_result))  # Counted
-print("Reference freq analys of Russian alphabeth:" + str(fr_dict))  # reference
-spis = ''.join(fr_dict.keys())
+# print("The result of freq analys: " + str(sorted_result))  # Counted
+# print("Reference freq analys of Russian alphabeth:" + str(fr_dict))  # reference
+print("res1: " + str(sorted_result))  # Counted
+print("res2:" + str(fr_dict_podgon))  # reference
+spis = ''.join(fr_dict_podgon.keys())
 print("The reference like list:" + str(spis))
 ######################################################## encryption attempt
 def decrypt_p(result, fr_dict):
@@ -114,6 +121,6 @@ def decrypt_p(result, fr_dict):
 #######################################################
 
 res_join = ''.join(sorted_result.keys())
-fr_dict_join = ''.join(fr_dict.keys())
+fr_dict_join = ''.join(fr_dict_podgon.keys())
 decrypt_p(res_join, fr_dict_join)
 
