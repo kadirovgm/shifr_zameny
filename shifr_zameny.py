@@ -5,7 +5,7 @@ alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюяАБ
 
 
 def keygen(alphabet):
-    with open('key.txt', mode='w') as file:
+    with open('key.txt', mode='w', encoding="utf-8") as file:
         key = ''.join(random.sample(alphabet, len(alphabet)))
         file.write(key)
     return key
@@ -20,11 +20,11 @@ def encrypt(alphabet, key):
     res = ""
     for i in range(len(alphabet)):
         d[alphabet[i]] = k[i]
-    with open('file.txt') as f:
+    with open('file.txt', encoding="utf-8") as f:
         read_data = f.read().strip()
         for i in range(len(read_data)-1):
             res += d[read_data[i]]
-    with open('output_enc.txt', 'w') as o:
+    with open('output_enc.txt', 'w', encoding="utf-8") as o:
         o.write(res)
 
 
@@ -34,11 +34,11 @@ def decrypt(key, alphabet):
     res = ""
     for i in range(len(key)):
         d[key[i]] = a[i]
-    with open('output_enc.txt') as enc:
+    with open('output_enc.txt', encoding="utf-8") as enc:
         read_data = enc.read().strip()
         for i in range(len(read_data)-1):
             res += d[read_data[i]]
-    with open('output_dec.txt', 'w') as o:
+    with open('output_dec.txt', 'w', encoding="utf-8") as o:
         o.write(res)
 
 
